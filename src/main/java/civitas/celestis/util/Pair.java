@@ -65,7 +65,7 @@ public record Pair<T>(@Nonnull T a, @Nonnull T b) {
      */
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
+        if (o == null) return false;
         if (!(o instanceof Pair<?> pair)) return false;
         return (Objects.equals(a, pair.a) && Objects.equals(b, pair.b)) ||
                 (Objects.equals(a, pair.b) && Objects.equals(b, pair.a));
